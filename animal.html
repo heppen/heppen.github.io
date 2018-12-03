@@ -1,0 +1,13 @@
+---
+layout: default
+title: Animal
+---
+<h2>Animals</h2>
+<ul>
+  {% for animal in site.animals %}
+  <li>
+      <a href="{{ animal.url }}">{{ animal.name }} - {{ animal.time }}</a>
+      <p>{{ animal.excerpt }}</p>
+  </li>
+  {% endfor %}
+</ul>

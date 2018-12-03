@@ -1,0 +1,13 @@
+---
+layout: default
+title: Fruit
+---
+<h1>Fruit</h1>
+<ul>
+  {% for fruit in site.fruits %}
+  <li>
+      <a href="{{ fruit.url }}">{{ fruit.name }} - {{ fruit.time }}</a>
+      <p>{{ fruit.content }}</p>
+  </li>
+  {% endfor %}
+</ul>

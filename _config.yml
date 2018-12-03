@@ -24,11 +24,18 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+
 # My configuration
+# My custom collections.
 collections:
     authors:
         output: true
+    fruits:
+        output: true
+    animals:
+        output: true
 
+# Default layout for different collections.
 defaults:
   - scope:
       path: ""
@@ -44,6 +51,10 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+# Permalink
+# date style is: /:categories/:year/:month/:day/:title:output_ext
+permalink: date
 
 # Build settings
 markdown: kramdown

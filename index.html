@@ -4,3 +4,14 @@ title: Home
 ---
 <!doctype html>
 <h1>{{ "Hello World!" | downcase }}</h1>
+<ul>
+  {% for member_hash in site.data.members %}
+  {% assign member = member_hash[1] %}
+    <li>
+      <a href="https://github.com/{{ member.username }}">
+        {{ member.name }}
+      </a>
+      ({{ member.members | size }} members)
+    </li>
+  {% endfor %}
+</ul>
